@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng/testng-1.0.dtd">
+<suite name="HBO Automation Script" parallel="false">
+
+    <!--cloud parameters-->
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnvName" value="browserstack"/>
+    <parameter name="os_version" value="10"/>
+    <parameter name="browserVersion" value="94"/>
+    <!--both cloud  local parameters-->
+    <parameter name="os" value="Windows"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="url" value="https://www.hbo.com/"/>
+    <test name = "smoke testing HBO search">
+        <classes>
+
+            <class name="test_the_pages.SearchTest"/>
+
+        </classes>
+    </test>
+
+</suite>
